@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Navbar() {
+export default function Navbar({searchText, setSearchText}) {
     const link = (
         <>
         <li>HOME</li>
@@ -51,6 +51,10 @@ export default function Navbar() {
   </svg>
   <input type="search" required placeholder="Search" 
 className='bg-transparent outline-none text-sm text-white placeholder-white/60 w-24 md:w-40'
+
+
+value={searchText}
+onChange={(e)=> setSearchText(e.target.value)}
 />
 </label>
 
